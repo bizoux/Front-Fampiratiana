@@ -128,7 +128,7 @@ export default{
         },
         methods: {
           AnararaFafana(idMpiaramanompo){
-      axios.delete("http://localhost:3000/fafanaAnarana/"+idMpiaramanompo).then(function(){
+      axios.delete("https://projet-fampirantiana.vercel.app/fafanaAnarana/"+idMpiaramanompo).then(function(){
         return window.location.reload();
       });
     },
@@ -192,7 +192,7 @@ export default{
       this.mampisehoFampidirana=true;
     },
             lisitraMpiaramanompo:function(){
-            axios.get("http://localhost:3000/LisitraMpiaraManompo").then((response)=>{
+            axios.get("https://projet-fampirantiana.vercel.app/LisitraMpiaraManompo").then((response)=>{
                 this.Lisitra=response.data;
                 
             })
