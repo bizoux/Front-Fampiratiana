@@ -267,7 +267,7 @@ export default {
       }
 
       axios
-        .post('http://localhost:3000/HampiditraAnjaraFampiratiana', dataToSend)
+        .post('https://projet-fampirantiana.vercel.app/HampiditraAnjaraFampiratiana', dataToSend)
         .then((response) => {
           this.HafatraFampidirana();
           console.log('Toutes les données ont été envoyées avec succès.');

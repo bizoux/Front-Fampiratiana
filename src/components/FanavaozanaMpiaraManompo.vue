@@ -87,7 +87,7 @@ export default{
         const id=this.$route.query.mpiaramanompo;
         // console.log(this.anaranaFenoina);
     //   this.idMpiaramanompo = this.$route.query.idMp;
-      axios.get("http://localhost:3000/MakaId/"+id).then(response => {
+      axios.get("https://projet-fampirantiana.vercel.app/MakaId/"+id).then(response => {
         //   this.idMpiaramanompo = response.data[0].anarana;
         this.anaranaFenoina=response.data[0].anarana;
         //   console.log(response.data[0].anarana);
@@ -100,7 +100,7 @@ export default{
         HanavaoAnarana:function(){
             const AnaranaVaovao = this.anaranaFenoina;
             const idMpiaramanompo = this.$route.query.mpiaramanompo;
-            axios.put("http://localhost:3000/fanovanaAnarana/"+idMpiaramanompo,{AnaranaVaovao}).then(response=>{
+            axios.put("https://projet-fampirantiana.vercel.app/fanovanaAnarana/"+idMpiaramanompo,{AnaranaVaovao}).then(response=>{
               this.HafatraFanovana();
               this.$router.push('/MpiaraManompo');
               return window.location.reload();

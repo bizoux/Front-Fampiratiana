@@ -82,7 +82,7 @@ export default{
       this.OraAzo = this.$route.query.oraNalaina
       this.formatDate = moment(this.DatyAzo).format('YYYY-MM-DD');
 
-      axios.get(`http://localhost:3000/Fanavaozana/${this.formatDate}/${this.OraAzo}`)
+      axios.get(`https://projet-fampirantiana.vercel.app/Fanavaozana/${this.formatDate}/${this.OraAzo}`)
         .then(response => {
           this.anarana1 = response.data[0].anarana1;
           this.anarana2 = response.data[0].anarana2;
@@ -98,7 +98,7 @@ export default{
             const anarana2 = this.anarana2;
             const datyMaj = this.formatDate;
             const OraMaj = this.OraAzo
-            axios.put("http://localhost:3000/fanovana/"+datyMaj+"/"+OraMaj,{anarana1,anarana2}).then((response)=>{
+            axios.put("https://projet-fampirantiana.vercel.app/fanovana/"+datyMaj+"/"+OraMaj,{anarana1,anarana2}).then((response)=>{
               console.log(res.data);
               this.$router.push('/FanaovanaFanovana');
  

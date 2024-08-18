@@ -81,7 +81,7 @@ export default{
             }
             else{
                 
-                axios.post("http://localhost:3000/fampidirana",{Anarana}).then(response=>{
+                axios.post("https://projet-fampirantiana.vercel.app/fampidirana",{Anarana}).then(response=>{
                     this.HafatraFampidirana();    
                     console.log(response);
                     return window.location.reload();

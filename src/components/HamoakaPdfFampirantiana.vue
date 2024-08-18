@@ -179,7 +179,7 @@ import modale from "./FamenoanaNyFanavaozana.vue";
         // LISITRA IREO MANANA ANJARA 
 
             IreoMananaAnjaraFampirantiana:function(){
-            axios.get("http://localhost:3000/listaAnjaraFampirantiana").then((response)=>{
+            axios.get("https://projet-fampirantiana.vercel.app/listaAnjaraFampirantiana").then((response)=>{
                 this.listaFampirantiana=response.data;
                 this.calculateDateRange();
                 
