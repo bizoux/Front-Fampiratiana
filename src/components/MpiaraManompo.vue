@@ -129,7 +129,8 @@ export default{
         methods: {
           AnararaFafana(idMpiaramanompo){
       axios.delete("https://projet-fampirantiana.vercel.app/fafanaAnarana/"+idMpiaramanompo).then(function(){
-        return window.location.reload();
+        // return window.location.reload();
+        this.$router.push('/MpiaraManompo');
       });
     },
           HamafaAnarana(idMpiaramanompo,anarana){
