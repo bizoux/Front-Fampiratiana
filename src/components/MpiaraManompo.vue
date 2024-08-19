@@ -45,7 +45,7 @@
     <center><button v-on:click="Hampiseho" class="btn btn-info">Hampiditra</button></center>
     <br>
     <center>
-            <table class="table-striped" v-if="Lisitra.length > 0">
+            <table class="table-striped table-responsive" v-if="Lisitra.length > 0">
                 <thead>
                     
                     <tr>

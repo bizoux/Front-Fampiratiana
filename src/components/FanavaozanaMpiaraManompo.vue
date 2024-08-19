@@ -102,8 +102,8 @@ export default{
             const idMpiaramanompo = this.$route.query.mpiaramanompo;
             axios.put("https://projet-fampirantiana.vercel.app/fanovanaAnarana/"+idMpiaramanompo,{AnaranaVaovao}).then(response=>{
               this.HafatraFanovana();
-              this.$router.push('/MpiaraManompo');
-              return window.location.reload();
+              this.$router.push('https://projet-fampirantiana.vercel.app/MpiaraManompo');
+            //   return window.location.reload();
               console.log(res.data);
  
         }).catch(erreur=>{

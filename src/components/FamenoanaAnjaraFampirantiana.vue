@@ -1,5 +1,4 @@
 <template>
-  
   <div class="fond">
     <header class="header">
       <a href="#" class="logo">Mi.Famp</a>
@@ -56,7 +55,7 @@
         <!-- Affichage des semaines -->
         <div v-for="(week, weekIndex) in weeks" :key="weekIndex">
           <!-- <h3>Semaine {{ weekIndex + 1 }}</h3> -->
-          <table>
+          <table class="table-responsive">
             <thead>
               <tr>
                 <th>Ora</th>
@@ -97,7 +96,6 @@
       <center><input type="button" value="Hampiditra" class="btn btn-primary" @click="HampiditraAnjaraFamp()"></center>
     </form>
     <!-- <button @click="generatePDF">generer</button> -->
-  </div>
   <footer>
     
     <div class="lienSite">
@@ -110,9 +108,114 @@
             <p>&copy; Copyright 2024 Jaffrelot,Tous droits réservés</p>
             
     </footer>
+
     <Fanampiana v-bind:mampiseho="mampiseho" v-bind:asehoNaTsia="asehoNaTsia" v-bind:mampiseho2="mampiseho2" v-bind:asehoNaTsia2="asehoNaTsia2"></Fanampiana>
     <FanampianaFanavaozana v-bind:mampiseho2="mampiseho2" v-bind:asehoNaTsia2="asehoNaTsia2"></FanampianaFanavaozana>
-</template>
+
+
+</div>
+
+
+
+  </template>
+
+
+
+
+                                                  <!-- RESPONSIVE -->
+
+
+                                                  <!-- <template>
+                                                    <div class="fond container-fluid">
+                                                      <header class="header row">
+                                                        <div class="col-6 col-md-4">
+                                                          <a href="#" class="logo">Mi.Famp</a>
+                                                        </div>
+                                                        <nav class="navbar col-6 col-md-8">
+                                                          <router-link to="/" class="active">Fampirantiana</router-link>&nbsp;&nbsp;&nbsp;
+                                                          <button v-on:click="Hampiseho" class="btn btn-info">Fanampiana</button>
+                                                        </nav>
+                                                      </header>
+                                                      <br>
+                                                      <div class="row justify-content-center align-items-center">
+                                                        <div class="col-12 col-md-6 text-center">
+                                                          <h2>FAMENOANA NY ANJARA FANAOVANA FAMPIRANTIANA</h2>
+                                                          <br>
+                                                          <div class="alignement row">
+                                                            <div class="inputDate col-12 col-md-6">
+                                                              <label for="start-date" class="form-label" style="color: white;"><b>Daty fampirantiana:&nbsp;</b></label>
+                                                              <input type="date" id="start-date" v-model="startDate" class="form-control" @change="updateDateRange" />
+                                                            </div>
+                                                            <div class="col-12 col-md-6">
+                                                              <router-link to="/LisitraFampirantiana" class="btn btn-primary">Hijery lisitra</router-link>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 text-center">
+                                                          <router-link to="/MpiaraManompo"><img src="../image/LogoFamp.png" alt="LogoFamp" class="img-fluid" style="height: 400px;"></router-link>
+                                                        </div>
+                                                      </div>
+                                                      <form>
+                                                        <div class="table-responsive">
+                                                          <div v-for="(week, weekIndex) in weeks" :key="weekIndex">
+                                                            <table class="table">
+                                                              <thead>
+                                                                <tr>
+                                                                  <th>Ora</th>
+                                                                  <th v-for="(date, dateIndex) in week" :key="dateIndex">
+                                                                    {{ formatDate(date) }}
+                                                                  </th>
+                                                                </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                <tr v-for="(Ora, timeIndex) in OraHanompoana" :key="timeIndex">
+                                                                  <td>{{ Ora.OraFampiratiana }}</td>
+                                                                  <td v-for="(date, dateIndex) in week" :key="dateIndex">
+                                                                    <div>
+                                                                      <AutoComplete
+                                                                        v-model="selectedMpiaraManompo[weekIndex][dateIndex][timeIndex][0]"
+                                                                        :suggestions="filteredMpiaraManompo"
+                                                                        @complete="searchMpiaraManompo"
+                                                                        :virtualScrollerOptions="{ itemSize: 38 }"
+                                                                        optionLabel="anarana"
+                                                                        dropdown
+                                                                      />
+                                                                      <AutoComplete
+                                                                        v-model="selectedMpiaraManompo[weekIndex][dateIndex][timeIndex][1]"
+                                                                        :suggestions="filteredMpiaraManompo"
+                                                                        @complete="searchMpiaraManompo"
+                                                                        :virtualScrollerOptions="{ itemSize: 38 }"
+                                                                        optionLabel="anarana"
+                                                                        dropdown
+                                                                      />
+                                                                    </div>
+                                                                  </td>
+                                                                </tr>
+                                                              </tbody>
+                                                            </table>
+                                                          </div>
+                                                        </div>
+                                                        <br>
+                                                        <center><input type="button" value="Hampiditra" class="btn btn-primary" @click="HampiditraAnjaraFamp()"></center>
+                                                      </form>
+                                                      <footer class="text-center">
+                                                        <div class="lienSite">
+                                                          <a href="#">Facebook</a>
+                                                          <a href="#">Linkedin</a>
+                                                          <a href="#">Instagram</a>
+                                                        </div>
+                                                        <p>&copy; Copyright 2024 Jaffrelot, Tous droits réservés</p>
+                                                      </footer>
+                                                      <Fanampiana v-bind:mampiseho="mampiseho" v-bind:asehoNaTsia="asehoNaTsia" v-bind:mampiseho2="mampiseho2" v-bind:asehoNaTsia2="asehoNaTsia2"></Fanampiana>
+                                                      <FanampianaFanavaozana v-bind:mampiseho2="mampiseho2" v-bind:asehoNaTsia2="asehoNaTsia2"></FanampianaFanavaozana>
+                                                    </div>
+                                                  </template>
+                                                   -->
+                                                  <!-- Votre script et styles restent inchangés -->
+                                                  
+
+
+
 
 <script>
 import moment from 'moment';
@@ -232,14 +335,14 @@ export default {
 
     // LISITRAN'NY ANARAN'NY MPIARA-MANOMPO
     ListaMpiaraManompo: function () {
-      axios.get('http://localhost:3000/listaMpiaramanompo').then((response) => {
+      axios.get('https://projet-fampirantiana.vercel.app/listaMpiaramanompo').then((response) => {
         this.listaMpiaraManompo = response.data;
       });
     },
 
     // DATY AMIN'IZAO
     Daty: function () {
-      axios.get('http://localhost:3000/Daty').then((response) => {
+      axios.get('https://projet-fampirantiana.vercel.app/Daty').then((response) => {
         this.DatyAzo = response.data[0].Daty;
         // this.startDate = moment(this.DatyAzo).format('DD-MM-YYYY');
       });
