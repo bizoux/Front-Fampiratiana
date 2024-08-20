@@ -101,11 +101,9 @@
 
 
     <br>
-        <div class="row">
-
-        
-            <table class="table-striped table-responsive" v-if="Lisitra.length > 0">
-                <thead>
+        <div class="row p-4">
+            <table class="table-striped table-responsive" v-if="Lisitra.length > 0"> 
+              <thead>
                     
                     <tr>
             
@@ -117,6 +115,7 @@
                 </thead>
             
                 <tbody>
+
                     <tr v-for="mpiaramanompo in filtreAnarana" :key="mpiaramanompo.idMpiaramanompo">
                         
                         <td class="toerana">{{mpiaramanompo.idMpiaramanompo}}</td>     
@@ -129,10 +128,16 @@
 
                         </td>     
                     </tr>
+
+
                 </tbody>
             
             
             </table>
+
+
+
+
         </div>
         <br>
 
@@ -349,13 +354,13 @@ export default{
   background-color: rgb(244,244,244);
   color: rgb(0, 0, 0);
 }
-table{
+/* table{
   border:1px solid rgb(244,244,244);
   border-collapse:collapse;
   width:1000px;
-}
+} */
 
-
+/* 
 td{
       border-right:1px solid rgb(246,246,246);
       border-left:1px solid rgb(246,246,246);
@@ -368,7 +373,7 @@ td{
 th{
         padding:20px;
         text-align: center;
-}
+} */
 .table-dark{
       padding:6px;
 }
