@@ -1,5 +1,5 @@
 <template>
-<div class="container-fluid">
+<div class="fond container-fluid">
     <header class="header row p-3">
 
       <div class="col-md-10">
@@ -285,8 +285,24 @@ export default{
   .fond{
     /* background: linear-gradient(235deg,#00d9ff,#010645a2,#00bcd4);
     height: auto; */
-    background: white;
+    height: 100vh;
+  width: 100%;
+  background: linear-gradient(40deg,#0ea753,rgba(29, 158, 218, 0.801),rgba(218, 29, 61, 0.801));
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite;
   }
+
+  @keyframes color{
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+  }
+}
 
   /* Menu */
   .navbar a{
