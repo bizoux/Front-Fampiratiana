@@ -1,50 +1,109 @@
 <template>
-<div class="fond">
-    <header class="header">
+<div class="container-fluid">
+    <header class="header row p-3">
+
+      <div class="col-md-10">
         <a href="#" class="logo">Mi.Famp</a>
-        <nav class="navbar">
+      </div>
+
+      <div class="d-flex justify-content-center col-md-2 navbar">
            
-          <router-link to="/">Fampirantiana</router-link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <!-- <button v-on:click="Hampiseho" class="btn btn-info">Fanampiana</button> -->
-           
-        </nav>
+          <router-link to="/">Fampirantiana</router-link>
+        
+      </div>
+        
   
-      </header>         
+    </header>         
 
 
 
-<br>    
- <center>
-    <div style="width: 400px;display: flex;gap: 10px;margin: 5px;">
-              <input type="text" placeholder="anarana" class="form-control" v-model="fikarohana" style="height: 45px;"/>
-              <router-link to="/" class="btn btn-primary">Hiverina</router-link>
-    </div>
-    </center>
+<br>
+
+<div class="row">
   
-    <!-- Valiny t@ fikarohana Hita-->  
-<br>  
-<center>
-  <div style="width: 900px;">
-      
-    <div class="alert alert-danger" v-if="this.fikarohana && filtreAnarana.length == 0">
+  <div class="col-md-4">
+    
+  </div>
+  
+  <div class="col-md-3">
+    <input type="text" placeholder="anarana" class="form-control" v-model="fikarohana" style="height: 45px;"/>        
+  </div>
+  
+  <div class="d-flex col-md-5">
+    <router-link to="/" class="btn btn-primary">Hiverina</router-link>
+  </div>
+
+
+</div>
+
+  
+    <!-- Valiny t@ fikarohana ts Hita-->  
+<br>
+
+<div class="row">
+  
+  <div class="col-md-2">
+    
+  </div>
+  
+  <div class="col-md-7">
+    <div class="alert alert-danger text-center" v-if="this.fikarohana && filtreAnarana.length == 0">
       <span style="font-size: larger;">Ialana tsiny tsy ao anaty tabilao io anarana io Tompoko!</span>
     </div>
   </div>
-  </center>
+  
+  <div class="d-flex col-md-3">
+    
+  </div>
 
-  <!-- Valiny t@ fikarohana tsy Hita-->  
-  <center>
-    <div style="width: 900px;">
-        
-      <div class="alert alert-success" v-if="this.fikarohana && filtreAnarana.length > 0">
-        <span style="font-size: larger;">Miisa {{filtreAnarana.length}} ny anaran'i {{ fikarohana }}.</span> 
-      </div>
+</div>
+
+
+<!-- FIKAROHANA HITA -->
+<div class="row">
+  <div class="col-md-2">
+    
+  </div>
+  
+  <div class="col-md-7">
+    <div class="alert alert-success text-center" v-if="this.fikarohana && filtreAnarana.length > 0">
+      <span style="font-size: larger;">Miisa {{filtreAnarana.length}} ny anaran'i {{ fikarohana }}.</span>
     </div>
-    </center>
+  </div>
+  
+  <div class="d-flex col-md-3">
+    
+</div>
 
-    <center><button v-on:click="Hampiseho" class="btn btn-info">Hampiditra</button></center>
+
+
+</div>
+    
+    <!-- Hampiditra mpiara-manompo -->
+    <div class="row">
+      
+      <div class="col-md-2">
+        
+      </div>
+      
+      <div class="d-flex col-md-7 justify-content-center">
+        <button v-on:click="Hampiseho" class="btn btn-info">Hampiditra</button>
+      </div>
+      
+      <div class="d-flex col-md-3">
+        
+      </div>
+    
+    
+    
+    </div>
+
+
+
     <br>
-    <center>
+        <div class="row">
+
+        
             <table class="table-striped table-responsive" v-if="Lisitra.length > 0">
                 <thead>
                     
@@ -74,8 +133,8 @@
             
             
             </table>
-
-        </center><br>
+        </div>
+        <br>
 
         <!-- <footer>
     
@@ -239,14 +298,14 @@ export default{
 }
 
 .header{
- position: static;
+ /* position: static;
  top:0;
  left:0;
  width: 100%;
  padding: 20px 10%;
  display: flex;
  justify-content: space-between;
- align-items: center;
+ align-items: center; */
  background: rgba(6, 170, 170, 0.486);
  /* border: 1px solid black; */
 
