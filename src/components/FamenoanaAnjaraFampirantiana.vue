@@ -1,24 +1,71 @@
 <template>
-  <div class="fond">
-    <header class="header">
-      <a href="#" class="logo">Mi.Famp</a>
-      <!-- <img src="../image/LogoFamp.png" alt="LogoFamp"> -->
+  <div class="fond container-fluid">
 
-      <!-- Menu -->
+
+    <div class="row header">
+      <div class="col-md-9 p-3">
+        <a href="#" class="logo ms-3">Mi.Famp</a>
+      </div>
+
+      <div class="d-flex col-md-2 justify-content-center align-items-center">
+        <nav class="navbar"> 
+          <router-link to="/" class="active">Fampirantiana</router-link>
+        </nav>
+      </div>
+
+      <div class="d-flex col-md-1 justify-content-center align-items-center">
+        <button v-on:click="Hampiseho" class="btn btn-info">Fanampiana</button>
+      </div>
+    </div>
+
+    <!-- <header class="header">
+      <a href="#" class="logo">Mi.Famp</a>
       <nav class="navbar">
          
         <router-link to="/" class="active">Fampirantiana</router-link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <button v-on:click="Hampiseho" class="btn btn-info">Fanampiana</button>
-        <!-- <router-link to="/MpiaraManompo">Fanampiana</router-link>&nbsp;
-         -->
-         <!-- <router-link to="/Apropos">Micro</router-link> -->
          
       </nav>
 
-    </header>
+    </header> -->
     <br>
+    <div class="row">
 
-<div style="display: flex;justify-content: center;align-items: center;">
+      <div class="col-md-1">
+        
+      </div>
+
+      <div class="col-md-10 text-center">
+        <h2>FAMENOANA NY ANJARA FANAOVANA FAMPIRANTIANA</h2>
+      </div>
+
+      <div class="col-md-1">
+       
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-4">
+        
+      </div>
+
+
+      <div class="d-flex col-md-4 align-items-center justify-content-center">
+        <label for="start-date" class="col-form-label fs-4" style="color: white;"><b>Daty fampirantiana&nbsp;:</b></label>
+        <input type="date" id="start-date" v-model="startDate" class="form-control-lg" @change="updateDateRange" />
+      </div>
+
+      <div class="col-md-4 text-center">
+        <router-link to="/MpiaraManompo"><img src="../image/LogoFamp.png" class="img-fluid" alt="LogoFamp"></router-link>
+      </div>
+      
+
+
+
+    </div>
+<!-- <div style="display: flex;justify-content: center;align-items: center;">
     <div style="display: inline-block;">
     <center>
       
@@ -37,7 +84,7 @@
       </div>
       <div>
         
-        <router-link to="/LisitraFampirantiana" class="btn btn-primary">Hijery lisitra</router-link>
+        <router-link to="/LisitraFampirantiana" class="btn btn-primary btn-block">Hijery lisitra</router-link>
       
       </div>
     
@@ -45,13 +92,13 @@
 
   </div>
   <div>
-    <router-link to="/MpiaraManompo"><img src="../image/LogoFamp.png" alt="LogoFamp" style="height: 400px;"></router-link>
+    <router-link to="/MpiaraManompo"><img src="../image/LogoFamp.png" class="img-fluid" alt="LogoFamp"></router-link>
   </div>
-</div>
+</div> -->
 
 
-    <form>
-      <div>
+    <form class="row">
+      <div class="table-responsive">
         <!-- Affichage des semaines -->
         <div v-for="(week, weekIndex) in weeks" :key="weekIndex">
           <!-- <h3>Semaine {{ weekIndex + 1 }}</h3> -->
@@ -96,7 +143,7 @@
       <center><input type="button" value="Hampiditra" class="btn btn-primary" @click="HampiditraAnjaraFamp()"></center>
     </form>
     <!-- <button @click="generatePDF">generer</button> -->
-  <footer>
+  <footer class="row">
     
     <div class="lienSite">
         <a href="#">Facebook</a>
@@ -487,14 +534,14 @@ button:hover{
 }
 
 .header{
- position: static;
+ /* position: static;
  top:0;
  left:0;
  width: 100%;
  padding: 20px 10%;
  display: flex;
  justify-content: space-between;
- align-items: center;
+ align-items: center; */
  background: rgba(6, 170, 170, 0.486);
  /* border: 1px solid black; */
 
